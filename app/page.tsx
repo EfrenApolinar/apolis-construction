@@ -15,11 +15,11 @@ export default function Home(){
 
           {/*Content */}
           <div className ="relative z-10 text-center px-6 max-w-3xl">
-            <h1 className = "text-6xl md:text-8xl font-extrabold uppercase text-white leading-none tracking-tight">
-              uhh. I'll think of one
+            <h1 className = "text-6xl md:text-7xl font-extrabold uppercase text-white leading-none tracking-tight">
+              Craftmanship. Integrity. Results
             </h1>
-            <p className= "text-white mt-6 max-w-md mx-auto">
-              Quality work. Serving the Greater Los Angeles area since 2004
+            <p className= "text-white mt-6 max-w-lg mx-auto">
+              Two Decades of Building Trust Across Los Angeles and the South Bay
             </p>
             
             <a href="#contact"
