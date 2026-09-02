@@ -22,11 +22,12 @@ export default function Home(){
               Two Decades of Building Trust Across Los Angeles and the South Bay
             </p>
             
+            {/*
             <a href="#contact"
             className = "inline-block mt-10 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-sm tracking-wide uppercase px-10 py-4 rounded-full transition-colors"
             >
               Get Started
-            </a>
+            </a>*/}
             </div>
         </section>
     </main>
