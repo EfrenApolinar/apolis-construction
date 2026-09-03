@@ -13,17 +13,15 @@ export default function QuoteForm(){
     async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>){
         e.preventDefault();
         setStatus("sending");
-        console.log({name,email, phone, message });
-        setStatus("success");
 
-    }
+        const res = await fetch ("api/quote",{
+            method: "POST",
+            headers:{ "Content-Type": "application/json" },
+            body: JSON.stringify({name,email, phone, message}),
+        });
 
-    if (status === "success"){
-        return(
-            <p className="text-lg font-semibold">
-                Thanks - we got your request and will reach out soon.
-            </p>
-        );
+        setStatus(res.ok ? "success" : "error");
+
     }
 /* this is the submit form  */
     return (
@@ -43,6 +41,7 @@ export default function QuoteForm(){
             value ={email}
             onChange ={(e) => setEmail(e.target.value)}
             className="w-full border border-zinc-300 rounded px-4 py-3"
+            required
             />
 
             <input
@@ -62,6 +61,12 @@ export default function QuoteForm(){
             rows ={5}
             className="w-full border border-zinc-300 rounded px-4 py-3"
             />
+
+            {status === "error" && (
+                <p className = "text-red-600">
+                    Something went wrong - please try again or call us at (310)597-8232
+                </p>
+            )}
 
             <button
             type = "submit"
